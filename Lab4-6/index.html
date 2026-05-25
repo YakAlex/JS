@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Фільмова база - Лабораторний проєкт 4-6</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 style="text-align: center; color: #0f172a;">Каталог Серіалів (TV Maze)</h1>
+    
+    <div class="controls">
+        <input type="text" id="searchInput" placeholder="Пошук за назвою...">
+        <select id="sortSelect">
+            <option value="default">Сортування за замовчуванням</option>
+            <option value="ratingDesc">За рейтингом (від найвищого)</option>
+            <option value="ratingAsc">За рейтингом (від найнижчого)</option>
+            <option value="nameAsc">За алфавітом (А-Я)</option>
+        </select>
+    </div>
+
+    <div id="moviesContainer" class="movie-grid">
+        <div class="loader" id="loader">Завантаження даних з API...</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
