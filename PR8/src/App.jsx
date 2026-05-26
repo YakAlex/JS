@@ -1,15 +1,24 @@
+import React from 'react';
 import { products } from './products';
 import { Product } from './components/Product/Product';
+import './App.css';
 
 function App() {
     return (
-        <div>
-            <header style={{ textAlign: "center", marginBottom: "20px" }}>
-                <h1>React Еко-Магазин</h1>
+        <div className="app-container">
+            <header className="app-header">
+                <h1>React Маркетплейс</h1>
+                <p>Практична робота №8 — Компоненти, Props та Налагодження стану</p>
             </header>
-            <main style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
-                {products.map(p => (
-                    <Product key={p.id} {...p} />
+            
+            <main className="products-grid">
+                {products.map(product => (
+                    <Product 
+                        key={product.id} 
+                        title={product.title}
+                        price={product.price}
+                        img={product.img}
+                    />
                 ))}
             </main>
         </div>
